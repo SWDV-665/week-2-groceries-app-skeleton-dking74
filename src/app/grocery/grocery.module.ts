@@ -1,8 +1,9 @@
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GroceryPage } from './grocery.page';
+import { AddGroceryItemModal } from './modal/modal.component';
 
 import { GroceryPageRoutingModule } from './grocery-routing.module';
 
@@ -11,8 +12,12 @@ import { GroceryPageRoutingModule } from './grocery-routing.module';
     IonicModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     GroceryPageRoutingModule
   ],
-  declarations: [GroceryPage]
+  declarations: [
+    GroceryPage,
+    AddGroceryItemModal
+  ]
 })
 export class GroceryPageModule {}
