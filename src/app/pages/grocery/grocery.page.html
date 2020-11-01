@@ -23,7 +23,8 @@
       <ion-item-sliding *ngFor="let grocery of groceries">
         <ion-item>
           <ion-label>{{ grocery.name }}</ion-label>
-          <div class="quantity-container">
+          <!-- This is to resolve bug with Safari... -->
+          <div class="quantity-container" tabindex="0">
             <ion-icon name="remove-outline" class="minus-quantity" color="danger" (click)="dropQuantityToGroceryItem(grocery)"></ion-icon>
             <span class="value-quantity">{{ grocery.quantity }}</span>
             <ion-icon name="add-outline" class="plus-quantity" color="success" (click)="addQuantityToGroceryItem(grocery)"></ion-icon>
@@ -36,9 +37,10 @@
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
-      <ion-button expand="block" (click)="addGroceryItem()">
-        Add Grocery Item
-        <ion-icon slot="end" name="add"></ion-icon>
-      </ion-button>
+    
+    <ion-button expand="block" (click)="addGroceryItem()">
+      Add Grocery Item
+      <ion-icon slot="end" name="add"></ion-icon>
+    </ion-button>
   </div>
 </ion-content>

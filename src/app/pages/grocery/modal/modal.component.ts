@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 
-import Grocery from '../../models/grocery';
+import Grocery from '@models/grocery';
 
 @Component({
   selector: 'add-grocery-item-modal',

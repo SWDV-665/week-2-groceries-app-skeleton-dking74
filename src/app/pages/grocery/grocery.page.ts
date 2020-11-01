@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 import { AddGroceryItemModal } from './modal/modal.component';
-import Grocery from '../models/grocery';
+import Grocery from '@models/grocery';
 
 @Component({
   selector: 'grocery-tab',
